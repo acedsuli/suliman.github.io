@@ -15,17 +15,25 @@ button.addEventListener("click", () => {
   playing = !playing;
 });
 
-/* ---------- WIGGLE + PRESS ANIMS ---------- */
+/* ---------- IDLE FLOAT ---------- */
+window.addEventListener("load", () => {
+  const elements = document.querySelectorAll("h1, p, button");
+  elements.forEach(el => el.classList.add("floating"));
+});
+
+/* ---------- WIGGLE + PRESS ---------- */
 const wiggleElements = document.querySelectorAll("h1, p, button");
 
 wiggleElements.forEach(el => {
   el.addEventListener("mouseenter", () => {
+    el.classList.remove("floating");
     el.classList.add("wiggling");
   });
 
   el.addEventListener("mouseleave", () => {
     el.classList.remove("wiggling");
     el.classList.remove("pressed");
+    el.classList.add("floating");
   });
 
   el.addEventListener("mousedown", () => {
