@@ -14,6 +14,7 @@ body {
   text-align: center;
 }
 
+/* ---------- TEXT STYLES ---------- */
 h1 {
   font-size: 80px;
   margin: 0 0 40px 0;
@@ -24,6 +25,7 @@ p {
   margin: 0 0 30px 0;
 }
 
+/* ---------- BUTTON ---------- */
 button {
   font-family: 'Press Start 2P', cursive;
   font-size: 16px;
@@ -34,3 +36,26 @@ button {
   cursor: pointer;
 }
 
+/* ---------- HOVER WIGGLE ---------- */
+h1, p, button {
+  display: inline-block;
+}
+
+h1:hover,
+p:hover,
+button:hover {
+  animation: wiggle 0.35s ease-in-out;
+}
+
+@keyframes wiggle {
+  0%   { transform: translateX(0) rotate(0deg); }
+  25%  { transform: translateX(-2px) rotate(-1deg); }
+  50%  { transform: translateX(2px) rotate(1deg); }
+  75%  { transform: translateX(-1px) rotate(-0.5deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+
+/* ---------- BUTTON PRESS ---------- */
+button:active {
+  transform: scale(0.9);
+}
