@@ -1,4 +1,4 @@
-/* Arcade Font from Google Fonts */
+/* Arcade Font */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
@@ -34,27 +34,9 @@ button {
   cursor: pointer;
 }
 
-/* Needed for transforms */
+/* Needed for animations */
 h1, p, button {
   display: inline-block;
-}
-
-/* Wiggle animation */
-@keyframes wiggle {
-  0%   { transform: translateX(0) rotate(0deg); }
-  25%  { transform: translateX(-2px) rotate(-1deg); }
-  50%  { transform: translateX(2px) rotate(1deg); }
-  75%  { transform: translateX(-1px) rotate(-0.5deg); }
-  100% { transform: translateX(0) rotate(0deg); }
-}
-
-/* JS-controlled classes */
-.wiggling {
-  animation: wiggle 0.35s ease-in-out;
-}
-
-.pressed {
-  transform: scale(0.9);
 }
 
 /* ---------- IDLE FLOAT ---------- */
@@ -66,4 +48,22 @@ h1, p, button {
   0%   { transform: translateY(0); }
   50%  { transform: translateY(-6px); }
   100% { transform: translateY(0); }
+}
+
+/* ---------- WIGGLE ---------- */
+.wiggling {
+  animation: wiggle 0.35s ease-in-out;
+}
+
+@keyframes wiggle {
+  0%   { transform: translateX(0) rotate(0deg); }
+  25%  { transform: translateX(-2px) rotate(-1deg); }
+  50%  { transform: translateX(2px) rotate(1deg); }
+  75%  { transform: translateX(-1px) rotate(-0.5deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+
+/* ---------- BUTTON PRESS ---------- */
+.pressed {
+  transform: scale(0.9);
 }
