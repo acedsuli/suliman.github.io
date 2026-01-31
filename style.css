@@ -67,3 +67,14 @@ h1, p, button {
 .pressed {
   transform: scale(0.9);
 }
+
+/* ---------- STAR STYLING ---------- */
+.star {
+  width: 50px;              /* size of each star */
+  height: 50px;
+  pointer-events: none;     /* prevents stars from blocking clicks */
+  position: absolute;       /* allows stars to float anywhere */
+  z-index: 5;               /* keeps stars above background */
+  opacity: 0;               /* start invisible, fade in via JS */
+  transition: opacity 2s ease; /* smooth fade in/out */
+}
