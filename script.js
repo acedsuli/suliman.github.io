@@ -32,7 +32,6 @@ function spawnStars() {
   for (let i = 0; i < 10; i++) {
     const star = document.createElement("img");
     star.src = "star.png"; // Replace with your actual image path
-    star.src = "star.png"; // Replace with your actual image path
     star.className = "star floating";
     star.style.opacity = "0";
     star.style.position = "absolute";
