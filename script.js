@@ -31,7 +31,7 @@ button.addEventListener("click", () => {
 function spawnStars() {
   for (let i = 0; i < 10; i++) {
     const star = document.createElement("img");
-    star.src = "star.png"; // Replace with your actual image path
+    star.src = "your-star-image.png"; // Replace with your actual image path
     star.className = "star floating";
     star.style.opacity = "0";
     star.style.position = "absolute";
@@ -77,3 +77,11 @@ wiggleElements.forEach(el => {
     el.classList.add("floating");
   });
 
+  el.addEventListener("mousedown", () => {
+    el.classList.add("pressed");
+  });
+
+  el.addEventListener("mouseup", () => {
+    el.classList.remove("pressed");
+  });
+});
